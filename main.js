@@ -110,7 +110,9 @@ StartButton.addEventListener("click", () => {
 });
 RestartBtn.addEventListener("click",restartgame)
 function restartgame() {
-    
+    score = 0;
+    scoreElement.innerHTML = score;
+
 
     blocks[`${food.x}-${food.y}`]?.classList.remove("food");
      snake.forEach(segment =>
@@ -129,9 +131,7 @@ if (score > highScore) {
     highScoreElement.innerHTML = highScore;
 }
 
-        score = 0;
-scoreElement.innerHTML = score;
-
+       
 
        intervalId = setInterval(() => {
         render();
@@ -148,6 +148,7 @@ addEventListener("keydown", (e) => {
     if (e.key === "ArrowRight" && direction !== "left") direction = "right";
     if (e.key === "ArrowDown" && direction !== "up") direction = "down";
 });
+
 
 
 
