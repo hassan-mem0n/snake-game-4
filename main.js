@@ -130,6 +130,8 @@ if (score > highScore) {
 }
 
         score = 0;
+scoreElement.innerHTML = score;
+
 
        intervalId = setInterval(() => {
         render();
@@ -146,6 +148,7 @@ addEventListener("keydown", (e) => {
     if (e.key === "ArrowRight" && direction !== "left") direction = "right";
     if (e.key === "ArrowDown" && direction !== "up") direction = "down";
 });
+
 
 
 
