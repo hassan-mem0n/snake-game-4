@@ -124,7 +124,7 @@ function restartgame() {
     y: Math.floor(Math.random() * cols) 
     }
 
-    if(highScore && highScore && score > 1){
+    if(highScore === highScore && score > 1){
             highScore = score++
             highScoreElement.innerHTML=highScore
 
@@ -147,3 +147,4 @@ addEventListener("keydown", (e) => {
     if (e.key === "ArrowRight" && direction !== "left") direction = "right";
     if (e.key === "ArrowDown" && direction !== "up") direction = "down";
 });
+
