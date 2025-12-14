@@ -110,6 +110,10 @@ StartButton.addEventListener("click", () => {
 });
 RestartBtn.addEventListener("click",restartgame)
 function restartgame() {
+    if (score > highScore) {
+    highScore = score;
+    highScoreElement.innerHTML = highScore;
+}
     score = 0;
     scoreElement.innerHTML = score;
 
@@ -126,10 +130,7 @@ function restartgame() {
     y: Math.floor(Math.random() * cols) 
     }
 
-if (score > highScore) {
-    highScore = score;
-    highScoreElement.innerHTML = highScore;
-}
+
 
        
 
@@ -148,10 +149,3 @@ addEventListener("keydown", (e) => {
     if (e.key === "ArrowRight" && direction !== "left") direction = "right";
     if (e.key === "ArrowDown" && direction !== "up") direction = "down";
 });
-
-
-
-
-
-
-
